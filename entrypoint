@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+/*▄────────▄
+  █        █
+  █  Ядро  █
+  █        █
+  ▀────────▀*/
+require('core'); // Ядро
+require('mvc');  // Работа с MVC-моделью
+require('menu'); // Меню для cli
+
+/*▄───────▄
+  █       █
+  █  MVC  █
+  █       █
+  ▀───────▀*/
+// Коллекция текстов
+require('./app/texts/text');
+
+// Коллекция моделей
+require('./app/models/modelFiles');
+require('./app/models/modelMenu');
+
+// Коллекция контроллеров
+require('./app/controllers/controllerMenu');
+
+// Коллекция точек входа
+require('./app/entrypoints/entrypoint');
+require('./app/entrypoints/entrypointHttpServer');
+
+/*▄───────────────▄
+  █               █
+  █  Точка входа  █
+  █               █
+  ▀───────────────▀*/
+entrypoint
